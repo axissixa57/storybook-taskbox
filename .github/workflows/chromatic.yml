@@ -17,5 +17,6 @@ jobs:
         with:
           # our project token, to see how to obtain it
           # refer to https://www.learnstorybook.com/intro-to-storybook/react/en/deploy/
-          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          # https://github.com/axissixa57/storybook-taskbox/settings -> Secrets
+          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
