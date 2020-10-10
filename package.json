@@ -18,7 +18,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token y2wnn4rqyo"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,6 +46,7 @@
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.26",
     "babel-loader": "^8.1.0",
+    "chromatic": "^5.2.0",
     "react-is": "^16.13.1",
     "react-test-renderer": "^16.13.1"
   },
@@ -53,6 +55,9 @@
       "Run the test runner (Jest) in a terminal": "yarn test --watchAll",
       "Start the component explorer on port 9009": "yarn storybook",
       "Run the frontend app proper on port 3000": "yarn start"
+    },
+    "deploy": {
+      "https://www.chromatic.com/": "Chromatic, a free publishing service made by the Storybook maintainers. It allows us to deploy and host our Storybook safely and securely in the cloud"
     }
   }
 }
