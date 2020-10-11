@@ -18,8 +18,16 @@ const store = {
 
 export default {
   component: PureInboxScreen,
-  title: "InboxScreen",
-  decorators: [story => <Provider store={store}>{story()}</Provider>],
+  title: "Taskbox/InboxScreen",
+  decorators: [(story) => <Provider store={store}>{story()}</Provider>],
+  parameters: {
+    assets: [
+      { name: "items", url: "designs/items.png" },
+      { name: "list 1", url: "designs/list-1.png" },
+      { name: "list 2", url: "designs/list-2.png" },
+      { name: "app", url: "designs/app.png" },
+    ],
+  },
 };
 
 const Template = (args) => <PureInboxScreen {...args} />;

@@ -5,16 +5,22 @@ import Task from "./Task";
 // To tell Storybook about the component we are documenting, we create a default export that contains:
 export default {
   component: Task, // the component itself,
-  title: "Task", // how to refer to the component in the sidebar of the Storybook app,
+  title: "Taskbox/Task", // how to refer to the component in the sidebar of the Storybook app,
   // it is necessary for example to change the background of the window Storybook (it can be moved to another document for example globally to preview.js)
-  // parameters: {
-  //   backgrounds: {
-  //     values: [
-  //       { name: 'turquoise', value: '#2ce' },
-  //       { name: 'white', value: '#fff' },
-  //     ],
-  //   },
-  // },
+  parameters: {
+    assets: [
+      { name: "items", url: "designs/items.png" },
+      { name: "list 1", url: "designs/list-1.png" },
+      { name: "list 2", url: "designs/list-2.png" },
+      { name: "app", url: "designs/app.png" },
+    ],
+    //   backgrounds: {
+    //     values: [
+    //       { name: 'turquoise', value: '#2ce' },
+    //       { name: 'white', value: '#fff' },
+    //     ],
+    //   },
+  },
   // specify the args (https://storybook.js.org/docs/react/api/argtypes) behavior in each story.
   // argTypes: {
   //   /* ...actionsData, */

@@ -5,8 +5,16 @@ import * as TaskStories from "./Task.stories";
 
 export default {
   component: PureTaskList,
-  title: "TaskList",
+  title: "Taskbox/TaskList",
   decorators: [(story) => <div style={{ padding: "3rem" }}>{story()}</div>], // creates a wrapper over the task list (story = TaskList)
+  parameters: {
+    assets: [
+      { name: "items", url: "designs/items.png" },
+      { name: "list 1", url: "designs/list-1.png" },
+      { name: "list 2", url: "designs/list-2.png" },
+      { name: "app", url: "designs/app.png" },
+    ],
+  },
 };
 
 const Template = (args) => <PureTaskList {...args} />;

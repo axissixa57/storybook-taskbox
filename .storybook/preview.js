@@ -11,10 +11,4 @@ export const parameters = {
       { name: 'white', value: '#fff' },
     ],
   },
-  assets: [
-    { name: "app", url: "designs/app.png" },
-    { name: "items", url: "designs/items.png" },
-    { name: "list 1", url: "designs/list-1.png" },
-    { name: "list 2", url: "designs/list-2.png" },
-  ],
 }
