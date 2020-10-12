@@ -7,6 +7,9 @@ export default {
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
+    width: { 
+      control: { type: 'range', min: 100, max: 1200, step: 50 },
+    },
   },
 };
 
