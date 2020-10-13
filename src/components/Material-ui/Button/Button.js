@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
-import { ButtonStyled } from "./styles";
+import { ButtonStyled, ButtonStyledWithMaterialStyled } from "./styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,18 +13,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonComponent({ label, backgroundColor, isDisabled, onClick }) {
+export default function ButtonComponent({ label, backgroundColor, isDisabled, onClick, ...props }) {
   const classes = useStyles();
+
+  console.log('props', props)
 
   return (
     <div className={classes.root}>
-      {/* there is a bug with styled-components */}
-      {/* <ButtonStyled variant="contained" backgroundColor={backgroundColor}>
-        {label}
-      </ButtonStyled> */}
       <Button variant="contained" disabled={isDisabled} style={backgroundColor && { backgroundColor }}>
         {label}
       </Button>
+      <ButtonStyled variant="contained" backgroundColor={backgroundColor}>
+        {label}
+      </ButtonStyled>
+      <ButtonStyledWithMaterialStyled variant="contained" backgroundColor={backgroundColor}>{label}</ButtonStyledWithMaterialStyled>
     </div>
   );
 }
